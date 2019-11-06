@@ -140,21 +140,47 @@ table {
   padding: 0;
   margin: 0;
   max-width: 100%;
-  font-size: 62.5%;
-  border: 1px solid grey;
+  border: 1px solid grey !important;
 }
 html,
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%;
 }
-h1 {
+.container {
+  font-size: 1.5re;
+  display: flex;
+  justify-content: space-between;
+}
+.container header {
+  width: 100%;
+  background-color: #20203a;
+  padding: 2%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.container header nav {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
   font-size: 2rem;
+}
+.container header nav a {
+  color: white;
+}
+.container header div {
+  width: 70%;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.container header div h1 {
+  font-size: 3rem;
+  padding: 1%;
   font-weight: bold;
 }
-h2,
-h3,
-h4,
-h5 {
-  font-size: 1.8rem;
+.container header div h2 {
+  font-size: 2rem;
+  padding: 1%;
 }

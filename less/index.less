@@ -59,7 +59,11 @@ table {
 
 
 //	Mixins
-
+.organize(){
+	display: flex;
+	justify-content: space-between;
+	
+}
 
 /* Set every element's box-sizing to border-box */
 * {
@@ -67,20 +71,74 @@ table {
 	padding:0;
 	margin: 0;
 	max-width: 100%;
-	font-size: 62.5%;
-	border: 1px solid grey;	
+	border: 1px solid grey !important;
 }
 
 html, body {
 	height: 100%;
 	font-family: @text-style;
+	font-size: 62.5%;
 }
 
-h1 {
-	font-size: 2rem;
-	font-weight: bold;
-}
+.container {
+	
+	font-size: 1.5re;
+	.organize();
 
-h2, h3, h4, h5 {
-    font-size: 1.8rem;
-}
+	header {
+		width: 100%;
+		background-color: rgb(32, 32, 58);
+		padding: 2%;
+		color: white;	
+		.organize();
+
+		nav {
+			width: 40%;
+			display: flex;
+			justify-content: space-between;
+			font-size: 2rem;
+			
+			
+			a {
+			color: white;
+			}
+		} //close nav
+		
+		div {
+			
+			width: 70%;
+			align-content: flex-start;
+			flex-direction: column;
+			
+			h1 {
+				font-size: 3rem;
+				padding: 1%;
+				font-weight: bold;
+			} //close h1
+	
+			h2 {
+				font-size: 2rem;
+				padding: 1%;
+			} //close h2
+
+		}
+
+		
+		
+	} // closes header
+
+	
+
+		
+
+		
+		
+	
+} // closes container
+
+
+
+
+
+
+
