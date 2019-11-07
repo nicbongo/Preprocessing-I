@@ -61,17 +61,27 @@ table {
 //	Mixins
 .organize(){
 	display: flex;
-	justify-content: space-between;
-	
+	justify-content: space-between;	
+}
+
+.hr() {
+	border: 1px solid darkgrey;
+	margin: 2% 0;
+}
+
+.asd() {
+	width: 100%;
+	margin: 2% 0;
+	text-align: center;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing:border-box;
+    box-sizing: border-box;
 	padding:0;
 	margin: 0;
 	max-width: 100%;
-	border: 1px solid grey !important;
+	// border: 1px solid grey !important;
 }
 
 html, body {
@@ -82,8 +92,16 @@ html, body {
 
 .container {
 	
-	font-size: 1.5re;
-	.organize();
+	font-size: 1.5rem;
+	margin: 0 2%;
+	
+	@media (max-width: 500px) {
+		flex-flow: column wrap;
+	}
+
+	hr {
+		.hr();
+	}
 
 	header {
 		width: 100%;
@@ -92,15 +110,32 @@ html, body {
 		color: white;	
 		.organize();
 
+			@media (max-width: 500px) {
+				flex-flow: row nowrap;
+				justify-content: center;
+				padding: 1%;
+			}
+			
 		nav {
 			width: 40%;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 			font-size: 2rem;
-			
+			padding: 2%;
+				
+			@media (max-width: 500px) {
+				width: 50%;
+				flex-flow: row wrap;
+				justify-content: space-around;
+				align-items: center;
+				margin: 1%;
+				padding: 0;
+			}//close nav media
 			
 			a {
-			color: white;
+				color: white;
+				text-decoration: none;	
+				margin: 2%;	
 			}
 		} //close nav
 		
@@ -112,7 +147,6 @@ html, body {
 			
 			h1 {
 				font-size: 3rem;
-				padding: 1%;
 				font-weight: bold;
 			} //close h1
 	
@@ -120,12 +154,127 @@ html, body {
 				font-size: 2rem;
 				padding: 1%;
 			} //close h2
+		}	
+	} // closes header
 
+	.top-image {
+		.organize();
+		align-items: center;
+		
+		.pic2 {
+			display: none;
+
+			@media (max-width: 500px) {
+				display: block;
+				width: 100%;
+				}
 		}
 
+		.pic {
+			width: 50%;
+			@media (max-width: 500px) {
+				display: none;
+				}
+			
+			img {
+				width: 100%;
+				padding: 2% 0 0 1%;
+								
+			
+			}//closes img
+		}//closes pic
+
+		p {
+			width: 50%;
+			padding: 2%;
+			font-size: 2rem;
+			text-align: center;
+			
+			@media (max-width: 500px) {
+				width: 100%;
+				background-color: skyblue;
+			}
+		}
+	} // closes top-image
+
+	.middle {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		font-size: 2rem;
+
+		.asd {
+			.asd();
+
+			p {
+				font-weight: bold;
+			}
+		}
+
+		.skills {
+			width: 32%;
+			text-align: center;
+			margin: 2% 0;
+		} //closes skills
+	}//closes middle
+
+	.bottom {
 		
-		
-	} // closes header
+		.asd p {
+			.asd();	
+			font-size: 2rem;
+			font-weight: bold;				
+		}
+	}
+
+	.experience {
+		margin: 0.5% 5%;
+		.organize();	
+
+		table {
+			width: 100%;
+			
+			tr:nth-child(even){
+				background-color: lightgrey;					
+			}
+			
+			.col {
+				width: 20%;
+			}
+
+			.col4 {
+				width: 40% !important;
+			}
+
+			th {
+				font-weight: bold;
+				text-align: left;
+				border-spacing: 3%;
+
+				td {
+                text-align:center; 
+				padding:5%;
+				}
+			}
+
+			li {
+				list-style-position: outside;
+			}
+		} // closes table
+
+	} // closes experience
+
+	contact {
+		font-size: 1.5rem;
+	}
+
+	footer {
+		margin: 1% 0;
+	}
+
+	.copyright {
+		text-align: center;
+	}
 
 	
 
